@@ -1,5 +1,7 @@
 extends RigidBody2D
 
-func _input(event):
+signal clicked
+
+func _on_player_input_event(_viewport, event, _shape_idx):
 	if event is InputEventScreenTouch and event.pressed:
-		self.apply_impulse(Vector2.ZERO, Vector2.RIGHT * 200)
+		emit_signal("clicked", self)
