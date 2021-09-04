@@ -1,0 +1,43 @@
+Super Slime Pool
+
+BASIC 
+
+You're a slime on a pool table. You're the cue ball (cue slime)
+Other balls are a bunch of various slimes.
+typing "slime" is hard
+
+knock slimes into pockets, clear them all to win.
+if cue slime falls into pocket, respawn and lose a life
+click & drag on cue slime for "pull back & go" slingshot style shoot
+
+maybe the pockets are just other bigger slimes and you're sort of feeding them? or gathering them?
+
+EXTRA
+
+traps, obstacles, interesting table layouts
+puzzle slimes:
+	slime that only gets pushed by other slimes, not cue slime
+	slime that splits in two each time it hits a wall
+	slime that you have to hit from one particular side to move it (some kind of directional shield)
+	slime that jumps up and down, so you have to time your hit or you pass under it
+	slimes that are light/heavy
+	
+powerups:
+	cue slime is heavier for one shot
+	cue slime can't fall in pocket / die for one shot
+	shot guide (peggle unicorn)
+
+	
+ART
+slimes
+slime splats
+basic pool table
+cute googly eyes?!
+need particles of slime splats
+make them look happy to get bounced about
+
+SOUND
+happy slime sounds
+squelchy slime sounds
+peggle ascending chime inspiration
+chill music
