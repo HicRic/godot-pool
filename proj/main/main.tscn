@@ -25,5 +25,8 @@ position = Vector2( 176.226, 92.0419 )
 script = ExtResource( 4 )
 arrow = NodePath("../Arrow")
 min_drag_len = 30.0
+max_drag_len = 200.0
+power_min = 40.0
+power_max = 1000.0
 
 [connection signal="clicked" from="player" to="input" method="_on_player_clicked"]

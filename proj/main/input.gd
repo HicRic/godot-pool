@@ -5,6 +5,9 @@ var state = InputState.READY
 
 export (NodePath) onready var arrow = get_node(arrow)
 export (float) var min_drag_len
+export (float) var max_drag_len
+export (float) var power_min
+export (float) var power_max
 
 func _ready():
 	change_state(InputState.READY)
@@ -17,9 +20,14 @@ func _on_player_clicked(ball):
 func _input(event):
 	if event is InputEventMouseButton and state == InputState.DRAGGING:
 		if !event.pressed:
-			var pos_delta = arrow.position - event.position
-			get_tree().call_group("player", "impulse", pos_delta)
 			change_state(InputState.READY)
+			var pos_delta = arrow.position - event.position
+			var drag_len = pos_delta.length()
+			if drag_len > min_drag_len:
+				var ratio = (drag_len-min_drag_len)/(max_drag_len-min_drag_len)
+				ratio = clamp(ratio, 0, 1)
+				var power = lerp(power_min, power_max, ratio)
+				get_tree().call_group("player", "impulse", pos_delta.normalized() * power)
 
 func _process(_delta):
 	var pos_delta = arrow.position - get_global_mouse_position()
