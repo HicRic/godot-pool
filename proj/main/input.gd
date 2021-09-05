@@ -1,6 +1,8 @@
 extends Node2D
 
-enum InputState { READY, DRAGGING, COOLDOWN }
+class_name ShotInput
+
+enum InputState { PREGAME, READY, DRAGGING }
 var state = InputState.READY
 var dragging_ball
 
@@ -11,7 +13,13 @@ export (float) var power_min
 export (float) var power_max
 
 func _ready():
-	change_state(InputState.READY)
+	change_state(InputState.PREGAME)
+	
+func can_play(playable):
+	if playable:
+		change_state(InputState.READY)
+	else:
+		change_state(InputState.PREGAME)
 
 func _on_player_clicked(ball):
 	if state == InputState.READY:
