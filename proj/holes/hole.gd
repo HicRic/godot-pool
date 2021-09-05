@@ -8,7 +8,7 @@ signal all_balls_inside
 
 func _process(_delta):
 	var balls = get_tree().get_nodes_in_group("ball")
-	var all_inside = false
+	var all_inside = true
 	for ball in balls:
 		if not self.overlaps_body(ball):
 			all_inside = false
