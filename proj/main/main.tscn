@@ -47,3 +47,7 @@ power_min = 40.0
 power_max = 1000.0
 
 [connection signal="clicked" from="player" to="input" method="_on_player_clicked"]
+[connection signal="all_balls_inside" from="table/hole" to="." method="_on_hole_all_balls_inside"]
+[connection signal="player_entered" from="table/hole" to="." method="_on_hole_player_entered"]
+
+[editable path="table"]

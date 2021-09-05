@@ -7,7 +7,9 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 64.0
 
-[node name="hole" type="Area2D"]
+[node name="hole" type="Area2D" groups=[
+"hole",
+]]
 space_override = 1
 gravity_point = true
 gravity_distance_scale = 0.1
@@ -33,3 +35,5 @@ scale = Vector2( 0.6, 0.6 )
 [node name="eye2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 24, -24 )
 scale = Vector2( 0.6, 0.6 )
+
+[connection signal="body_entered" from="." to="." method="_on_hole_body_entered"]

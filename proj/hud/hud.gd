@@ -5,16 +5,16 @@ class_name HUD
 onready var restart_button = ($RestartButton as Button)
 
 func set_ready():
-	restart_button.visible = true
+	restart_button.visible = false
 	
 func set_playing():
 	restart_button.visible = false
 	
 func set_won():
-	pass
+	restart_button.visible = true
 	
 func set_lost():
-	pass
+	restart_button.visible = true
 
 func _on_Button_pressed():
 	var err = get_tree().reload_current_scene()

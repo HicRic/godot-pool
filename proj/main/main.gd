@@ -31,3 +31,13 @@ func set_phase(phase):
 		
 	if active_phase == Phase.LOSE:
 		hud.set_lost()
+
+
+func _on_hole_player_entered():
+	if active_phase == Phase.PLAYING:
+		set_phase(Phase.LOSE)
+
+
+func _on_hole_all_balls_inside():
+	if active_phase == Phase.PLAYING:
+		set_phase(Phase.WIN)
