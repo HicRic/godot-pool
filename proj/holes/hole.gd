@@ -13,7 +13,6 @@ func _process(_delta):
 		if not self.overlaps_body(ball):
 			all_inside = false
 			
-	
 	if all_inside:
 		emit_signal("all_balls_inside")
 	
