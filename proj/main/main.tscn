@@ -13,6 +13,18 @@
 [node name="ball2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 199.798, 185.206 )
 
+[node name="ball3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 518.798, 307.206 )
+
+[node name="ball4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 301.798, 377.206 )
+
+[node name="ball5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 345.798, 231.206 )
+
+[node name="ball6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 243.798, 283.206 )
+
 [node name="ball" parent="." instance=ExtResource( 2 )]
 position = Vector2( 266.023, 106.634 )
 

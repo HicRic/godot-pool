@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Sprite",
+"class": "Eye",
+"language": "GDScript",
+"path": "res://eye/eye.gd"
+} ]
+_global_script_class_icons={
+"Eye": ""
+}
+
 [application]
 
 config/name="SuperSlimePool"

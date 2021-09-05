@@ -43,4 +43,4 @@ shape = SubResource( 3 )
 shape = SubResource( 4 )
 
 [node name="hole" parent="." instance=ExtResource( 1 )]
-position = Vector2( 656, 144 )
+position = Vector2( 512, 152 )
